@@ -8,14 +8,14 @@
     ".NETCoreApp,Version=v8.0": {
       "Desktop/1.0.0": {
         "dependencies": {
-          "BookBusinessLogic": "1.0.0",
-          "BookContract": "1.0.0",
-          "BookDatabaseImplement": "1.0.0",
           "COP_V6": "1.0.0",
           "ComponentProgramming": "1.0.0",
           "Components": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "8.0.10",
           "PluginsConventionLibrary": "1.0.0",
+          "ProductBusinessLogic": "1.0.0",
+          "ProductContract": "1.0.0",
+          "ProductDatabaseImplement": "1.0.0",
           "RebornComponent": "1.0.0",
           "Unity": "5.11.10"
         },
@@ -761,34 +761,34 @@
           }
         }
       },
-      "BookBusinessLogic/1.0.0": {
-        "dependencies": {
-          "BookContract": "1.0.0",
-          "BookDatabaseImplement": "1.0.0"
-        },
-        "runtime": {
-          "BookBusinessLogic.dll": {}
-        }
-      },
-      "BookContract/1.0.0": {
-        "runtime": {
-          "BookContract.dll": {}
-        }
-      },
-      "BookDatabaseImplement/1.0.0": {
-        "dependencies": {
-          "BookContract": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "8.0.10",
-          "Npgsql": "8.0.5",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.10"
-        },
-        "runtime": {
-          "BookDatabaseImplement.dll": {}
-        }
-      },
       "PluginsConventionLibrary/1.0.0": {
         "runtime": {
           "PluginsConventionLibrary.dll": {}
+        }
+      },
+      "ProductBusinessLogic/1.0.0": {
+        "dependencies": {
+          "ProductContract": "1.0.0",
+          "ProductDatabaseImplement": "1.0.0"
+        },
+        "runtime": {
+          "ProductBusinessLogic.dll": {}
+        }
+      },
+      "ProductContract/1.0.0": {
+        "runtime": {
+          "ProductContract.dll": {}
+        }
+      },
+      "ProductDatabaseImplement/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.10",
+          "Npgsql": "8.0.5",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.10",
+          "ProductContract": "1.0.0"
+        },
+        "runtime": {
+          "ProductDatabaseImplement.dll": {}
         }
       }
     }
@@ -1184,22 +1184,22 @@
       "path": "unity/5.11.10",
       "hashPath": "unity.5.11.10.nupkg.sha512"
     },
-    "BookBusinessLogic/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "BookContract/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "BookDatabaseImplement/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "PluginsConventionLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProductBusinessLogic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProductContract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProductDatabaseImplement/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

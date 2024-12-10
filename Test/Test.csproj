@@ -15,9 +15,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BookBusinessLogic\BookBusinessLogic.csproj" />
-    <ProjectReference Include="..\BookContract\BookContract.csproj" />
-    <ProjectReference Include="..\BookDatabaseImplement\BookDatabaseImplement.csproj" />
+    <ProjectReference Include="..\BookBusinessLogic\ProductBusinessLogic.csproj" />
+    <ProjectReference Include="..\BookContract\ProductContract.csproj" />
+    <ProjectReference Include="..\BookDatabaseImplement\ProductDatabaseImplement.csproj" />
   </ItemGroup>
 
 </Project>

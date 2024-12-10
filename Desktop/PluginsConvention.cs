@@ -96,19 +96,28 @@ namespace Desktop
 
 				var products = _productLogic.Read(null);
 
+				var annotationRanges = new List<(int Min, int Max)>
+			{
+				(10, 20),
+				(20, 30),
+				(30, 40),
+				(40, 50),
+				(50, 60)
+			};
 				var seriesData = new Dictionary<string, List<int>>();
 
-				var productsGroupedByUnit = products.GroupBy(product => product.Unit);
+				var productsGroupedByType = products.GroupBy(products => products.Unit);
 
-				foreach (var group in productsGroupedByUnit)
+				foreach (var group in productsGroupedByType)
 				{
 					var seriesName = group.Key;
 					var seriesValues = new List<int>();
 
-					var countries = group.GroupBy(product => product.Country);
-					foreach (var country in countries)
+					foreach (var range in annotationRanges)
 					{
-						seriesValues.Add(country.Count());
+						int countInRange = group.Count(product =>
+							product.Country.Length >= range.Min && product.Country.Length < range.Max);
+						seriesValues.Add(countInRange);
 					}
 
 					seriesData[seriesName] = seriesValues;
@@ -209,7 +218,7 @@ namespace Desktop
 					("Country", "Страна-производитель", 10)
 				};
 
-				var merges = new List<(int, int)> { (2, 3) };
+				var merges = new List<(int, int)> { (1, 2) };
 
 				var data = products.Select(product => new ProductDataForPdfWithFields
 				{

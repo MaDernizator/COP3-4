@@ -202,17 +202,17 @@ namespace Desktop
 
 			var seriesData = new Dictionary<string, List<int>>();
 
-			var booksGroupedByType = products.GroupBy(products => products.Unit);
+			var productsGroupedByType = products.GroupBy(products => products.Unit);
 
-			foreach (var group in booksGroupedByType)
+			foreach (var group in productsGroupedByType)
 			{
 				var seriesName = group.Key;
 				var seriesValues = new List<int>();
 
 				foreach (var range in annotationRanges)
 				{
-					int countInRange = group.Count(book =>
-						book.Country.Length >= range.Min && book.Country.Length < range.Max);
+					int countInRange = group.Count(product =>
+						product.Country.Length >= range.Min && product.Country.Length < range.Max);
 					seriesValues.Add(countInRange);
 				}
 
