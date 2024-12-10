@@ -280,7 +280,7 @@ namespace Desktop
 
 		public void ReloadData()
 		{
-			productList.SetTemplate("{", "}", "Страна {Country} Идентификатор {Id} Название {Name} Единица измерений {Unit}");
+			productList.SetTemplate("{", "}", "Страна {Country} Идентификатор {Id} Название {Name} Единица измерений {Unit}.");
 			var products = _productLogic.Read(null);
 			foreach (var product in products)
 			{
